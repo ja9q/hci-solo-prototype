@@ -31,6 +31,7 @@ export function PaymentPanel({orderMode, setModalOpen, setOrderMode, payment, se
                 <div className="flex flex-col gap-5 border-1 border-gray-300 p-3 rounded-xl mb-5">
                     <p className="font-bold text-lg ">Your credit and debit cards</p>
                     <table>
+                        <tbody>
                         <tr className="border-1 border-white border-b-gray-300 py-2  ">
                             <td className="font-normal text-gray-600"></td>
                             <td className="font-normal text-gray-600"></td>
@@ -40,6 +41,7 @@ export function PaymentPanel({orderMode, setModalOpen, setOrderMode, payment, se
                         </tr>
                         <tr className="h-2"></tr>
                         {options}
+                        </tbody>
                     </table>
                 </div>
                 <button onClick={()=>{setOrderMode(2)}} className=" rounded-xl bg-amber-300 py-1 px-5 cursor-pointer hover:bg-amber-400">{`Pay with ${payment.alias}`}</button>
