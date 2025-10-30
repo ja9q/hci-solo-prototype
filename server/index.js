@@ -246,8 +246,8 @@ function OrderPanel({ orderMode, setOrderMode }) {
   ] }) });
 }
 function PaymentPanel({ orderMode, setModalOpen, setOrderMode, payment, setPayment }) {
-  const options = payments.map((p) => {
-    return /* @__PURE__ */ jsxs("tr", { onClick: () => {
+  const options = payments.map((p, i) => {
+    return /* @__PURE__ */ jsxs("tr", { id: `test-${i}`, onClick: () => {
       {
         setPayment(p);
       }
@@ -421,7 +421,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: home,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-BwxNzArz.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-Br7BZHnd.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": ["/assets/root-CZGOC_4U.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-CADXI6zo.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-e9d86aa5.js", "version": "e9d86aa5", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/assets/entry.client-BwxNzArz.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-Br7BZHnd.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": ["/assets/root-CZGOC_4U.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-CSTU2uWb.js", "imports": ["/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-a90e4816.js", "version": "a90e4816", "sri": void 0 };
 const assetsBuildDirectory = "build\\client";
 const basename = "/";
 const future = { "v8_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
