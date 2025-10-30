@@ -424,7 +424,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: home,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/hci-solo-prototype/assets/entry.client-BwxNzArz.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/hci-solo-prototype/assets/root-DU0WJ9Kv.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": ["/hci-solo-prototype/assets/root-CZGOC_4U.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/hci-solo-prototype/assets/home-CQq6CrgI.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/hci-solo-prototype/assets/manifest-800c1e2e.js", "version": "800c1e2e", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/hci-solo-prototype/assets/entry.client-BwxNzArz.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/hci-solo-prototype/assets/root-DU0WJ9Kv.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": ["/hci-solo-prototype/assets/root-CZGOC_4U.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": "hci-solo-prototype", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/hci-solo-prototype/assets/home-CQq6CrgI.js", "imports": ["/hci-solo-prototype/assets/chunk-UIGDSWPH-DcDWgLby.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/hci-solo-prototype/assets/manifest-464b6470.js", "version": "464b6470", "sri": void 0 };
 const assetsBuildDirectory = "build\\client";
 const basename = "/";
 const future = { "v8_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
@@ -446,8 +446,8 @@ const routes = {
   "routes/home": {
     id: "routes/home",
     parentId: "root",
-    path: void 0,
-    index: true,
+    path: "hci-solo-prototype",
+    index: void 0,
     caseSensitive: void 0,
     module: route1
   }
