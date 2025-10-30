@@ -42,7 +42,7 @@ export function AddressPanel({orderMode, setOrderMode, setModalOpen, address, se
                 
             </> : <>
                 <div className="flex flex-row justify-between">
-                    <p className="font-bold text-xl">Paying with {address.alias}</p> 
+                    <p className="font-bold text-xl">Delivering to {address.alias}</p> 
                     <p onClick={()=>{setOrderMode(0)}} className="text-blue-800 cursor-pointer">Change</p>
                 </div>
                 <p className="text-blue-800 cursor-pointer mt-5">Add delivery instructions</p>
