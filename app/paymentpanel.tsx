@@ -10,8 +10,8 @@ interface PaymentPanelProps {
 }
 
 export function PaymentPanel({orderMode, setModalOpen, setOrderMode, payment, setPayment}:PaymentPanelProps) {
-    const options = payments.map((p) => { return (
-        <tr onClick={() => {{setPayment(p)}}} className={`${(payment==p) ? ' bg-orange-100 ' : ''}`}>
+    const options = payments.map((p, i) => { return (
+        <tr id={`test-${i}`} onClick={() => {{setPayment(p)}}} className={`${(payment==p) ? ' bg-orange-100 ' : ''}`}>
             <td className="pl-5"><input  type="radio" checked={p==payment} onChange={() => {{setPayment(p)}}} name="payment" className="mt-2 w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600" /></td>
             <td className="w-13"><div className="mt-1 h-6 w-10 bg-gray-400"/></td>
 
@@ -50,7 +50,7 @@ export function PaymentPanel({orderMode, setModalOpen, setOrderMode, payment, se
                 </div>
                 
                 <p className="text-blue-800 cursor-pointer mt-5">Use a gift card, voucher, or promo code</p>
-            </>}
+            </>} 
         </div>
     )
 }
