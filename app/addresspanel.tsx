@@ -21,7 +21,7 @@ export function AddressPanel({orderMode, setOrderMode, setModalOpen, address, se
                 <p className="p-0 m-0">{a.address}</p>
                 <p className="p-0 m-0">Phone number: {a.number}</p>
              </label>
-                <p  className="text-blue-800 cursor-pointer p-0 m-0">Edit Address | Add delivery instructions</p></div>
+                <p  className="text-blue-800 cursor-pointer p-0 m-0">Edit Address | Add delivery instructions </p></div>
            
         </div>)})
 
