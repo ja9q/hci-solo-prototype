@@ -11,6 +11,7 @@ export function Welcome() {
   const [modalOpen, setModalOpen] = useState(false);
   const [address, setAddress] = useState<Address>(addresses[0]);
   const [payment, setPayment] = useState<Payment>(payments[0]);
+  const [shipping, setShipping] = useState(0);
 
   return (
     <>
@@ -19,7 +20,7 @@ export function Welcome() {
         <p className="leading-6 text-gray-200 text-xl text-center">Secure checkout</p>
     </header>
     <main className="flex  justify-center pb-4 gap-10 text-sm">
-      <OrderSettings orderMode={orderMode}  setModalOpen={setModalOpen} setOrderMode={setOrderMode} address={address} payment={payment} setAddress={setAddress} setPayment={setPayment} />
+      <OrderSettings orderMode={orderMode}  setModalOpen={setModalOpen} setOrderMode={setOrderMode} address={address} payment={payment} setAddress={setAddress} setPayment={setPayment} setShipping={setShipping} shipping={shipping} />
       <RightPanel orderMode={orderMode}  setOrderMode={setOrderMode} address={address} payment={payment} />
     </main>
     </>

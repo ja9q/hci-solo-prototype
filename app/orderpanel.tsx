@@ -3,11 +3,17 @@ import type { Address, Payment } from "./types"
 interface OrderPanelProps {
     orderMode: number
     setOrderMode: (val: number)=>void
-    address: Address
-    payment: Payment
+    shipping: number
+    setShipping: (val: number)=>void
 }
 
-export function OrderPanel({orderMode, setOrderMode,}:OrderPanelProps) {
+export function OrderPanel({orderMode, setOrderMode, shipping, setShipping}:OrderPanelProps) {
+
+    function handleOrderClick() {
+        alert("Order placed! [END TASK]")
+    }
+    
+
     return (<>
             {orderMode == 2 ? <> <div className="bg-white w-250 p-5">
                 <p className="font-bold text-xl">Arriving Nov 15, 2025</p> 
@@ -32,15 +38,15 @@ export function OrderPanel({orderMode, setOrderMode,}:OrderPanelProps) {
                         </div>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <div className="w-100 flex flex-row">
-                            <input id='ship-1'  type="radio" checked name="address" className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600" />
+                        <div onClick={()=>setShipping(0)} className="w-100 flex flex-row">
+                            <input id='ship-1'  type="radio" checked={shipping == 0} name="address" className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600" />
                             <label htmlFor="ship-1" className="ml-3 w-100 flex flex-row justify-between">
                                 <div>Shipping Option 1</div>
                                 <div>FREE</div>
                             </label>
                         </div>
-                        <div className="w-100 flex flex-row">
-                            <input id='ship-2'  type="radio"  name="address" className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600" />
+                        <div onClick={()=>setShipping(1)} className="w-100 flex flex-row">
+                            <input id='ship-2' checked={shipping == 1}  type="radio"  name="address" className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600" />
                             <label htmlFor="ship-2" className="ml-3 w-100 flex flex-row justify-between">
                                 <div>Shipping Option 2</div>
                                 <div>FREE</div>
@@ -50,7 +56,7 @@ export function OrderPanel({orderMode, setOrderMode,}:OrderPanelProps) {
                 </div>
             </div>
             <div className="bg-white w-250 p-5 center-items flex flex-row gap-7">
-                <button onClick={()=>{setOrderMode(2)}} className="w-70 h-8 rounded-xl bg-amber-300 py-1 px-5 cursor-pointer hover:bg-amber-400">Place your order</button>
+                <button onClick={handleOrderClick} className="w-70 h-8 rounded-xl bg-amber-300 py-1 px-5 cursor-pointer hover:bg-amber-400">Place your order</button>
                 <div>
                     <p className="text-xl font-bold">Order total: $0.00</p>
                     <p className="text-xs">By placing your order, you agree to Amazon's <a className="text-blue-800 cursor-pointer underline">privacy notice</a> and <a className="text-blue-800 cursor-pointer underline">conditions of use</a></p>
